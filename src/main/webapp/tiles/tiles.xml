@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC 
+"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+    <definition name="masterPage" template="/views/layouts/master.jsp" >
+        <put-attribute name="header" value="/views/inc/header.jsp" />
+        <put-attribute name="sidebar" value="/views/inc/sidebar.jsp" />
+        <put-attribute name="footer" value="/views/inc/footer.jsp" />
+        <put-attribute name="rightSidebar" value="/views/inc/rightSidebar.jsp" />
+    </definition>
+    <definition name="loginPage" template="/views/layouts/loginTemplate.jsp" >
+    </definition>        
+       
+    <definition name="login/index" extends="loginPage">
+        <put-attribute name="content" value="/views/login/index.jsp" />
+    </definition>
+       <definition name="login/register" extends="loginPage">
+        <put-attribute name="content" value="/views/login/register.jsp" />
+    </definition>
+    
+    
+    <definition name="home/index" extends="masterPage">
+        <put-attribute name="content" value="/views/home/index.jsp" />
+    </definition>       
+        
+
+    <definition name="task/index" extends="masterPage">
+        <put-attribute name="content" value="/views/task/index.jsp" />
+    </definition>   
+    <definition name="task/taskExpiresInDays" extends="masterPage">
+        <put-attribute name="content" value="/views/task/taskExpiresInDays.jsp" />
+    </definition> 
+    <definition name="task/search" extends="masterPage">
+        <put-attribute name="content" value="/views/task/search.jsp" />
+    </definition>   
+     <definition name="task/searchResult" extends="masterPage">
+        <put-attribute name="content" value="/views/task/searchResult.jsp" />
+    </definition>   
+    
+    <definition name="task/create" extends="masterPage">
+        <put-attribute name="content" value="/views/task/create.jsp" />
+    </definition>
+    <definition name="task/show" extends="masterPage">
+        <put-attribute name="content" value="/views/task/show.jsp" />
+    </definition>
+    <definition name="task/edit" extends="masterPage">
+        <put-attribute name="content" value="/views/task/edit.jsp" />
+    </definition>
+    
+        
+<!--       <definition name="login/register" extends="masterPage">
+        <put-attribute name="content" value="/views/login/register.jsp" />
+    </definition>   -->
+          
+              
+	
+</tiles-definitions>
